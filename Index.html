@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>FireTech Solutions</title>
+
+<link rel="icon" href="https://cdn-icons-png.flaticon.com/512/785/785116.png">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#0b0f1a;
+color:white;
+}
+
+/* NAVBAR */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 10%;
+background:#020617;
+position:fixed;
+width:100%;
+z-index:1000;
+}
+
+.logo{
+font-size:24px;
+font-weight:700;
+color:#ff4c29;
+}
+
+nav a{
+margin-left:25px;
+text-decoration:none;
+color:white;
+}
+
+nav a:hover{
+color:#ff4c29;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+position:relative;
+overflow:hidden;
+}
+
+/* Animated background */
+
+.hero::before{
+content:"";
+position:absolute;
+width:200%;
+height:200%;
+background:radial-gradient(circle,#d12b0a 0%,transparent 30%),
+radial-gradient(circle,#00c6ff 0%,transparent 30%),
+radial-gradient(circle,#ff00cc 0%,transparent 30%);
+background-size:50% 50%;
+animation:movebg 15s linear infinite;
+opacity:0.25;
+}
+
+@keyframes movebg{
+0%{transform:translate(0,0);}
+50%{transform:translate(-200px,-200px);}
+100%{transform:translate(0,0);}
+}
+
+.hero h1,.hero p,.hero .btn{
+position:relative;
+z-index:2;
+}
+
+.hero h1{
+font-size:60px;
+margin-bottom:20px;
+}
+
+.hero span{
+color:#ff4c29;
+}
+
+.btn{
+padding:12px 30px;
+background:#ff4c29;
+border-radius:30px;
+color:white;
+text-decoration:none;
+}
+
+/* SECTIONS */
+
+section{
+padding:100px 10%;
+}
+
+.title{
+text-align:center;
+font-size:40px;
+margin-bottom:50px;
+}
+
+/* SERVICES */
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.card{
+background:#111827;
+padding:30px;
+border-radius:15px;
+text-align:center;
+cursor:pointer;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+background:#1f2937;
+}
+
+.card h3{
+color:#ff4c29;
+margin-bottom:10px;
+}
+
+/* PORTFOLIO */
+
+.portfolio{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.portfolio img{
+width:100%;
+border-radius:10px;
+}
+
+/* TEAM */
+
+.team{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:30px;
+text-align:center;
+}
+
+.member{
+background:#111827;
+padding:25px;
+border-radius:15px;
+}
+
+.member img{
+width:120px;
+height:120px;
+border-radius:50%;
+border:3px solid #ff4c29;
+margin-bottom:10px;
+}
+
+/* CONTACT */
+
+.contact{
+text-align:center;
+}
+
+footer{
+text-align:center;
+padding:20px;
+background:#020617;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">🔥 FireTech</div>
+
+<nav>
+<a href="#">Home</a>
+<a href="#services">Services</a>
+<a href="#portfolio">Projects</a>
+<a href="#team">Team</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+
+<section class="hero">
+
+<h1>Build Your <span>Digital Future</span></h1>
+
+<p>Web Development • Logo Design • UI/UX • Data Analytics • Internship</p>
+
+<a href="#services" class="btn">Explore Services</a>
+
+</section>
+
+
+<section id="services">
+
+<h2 class="title">Our Services</h2>
+
+<div class="services">
+
+<div class="card" onclick="openForm('web')">
+<h3>🌐 Web Development</h3>
+<p>Startup websites and business platforms.</p>
+</div>
+
+<div class="card" onclick="openForm('logo')">
+<h3>🎨 Logo Design</h3>
+<p>Creative branding and identity design.</p>
+</div>
+
+<div class="card" onclick="openForm('uiux')">
+<h3>🖥 UI/UX Design</h3>
+<p>Modern interface design and prototypes.</p>
+</div>
+
+<div class="card" onclick="openForm('data')">
+<h3>📊 Data Analytics</h3>
+<p>Business insights and dashboard solutions.</p>
+</div>
+
+<div class="card" onclick="openForm('internship')">
+<h3>🎓 Internship</h3>
+<p>Industry level internship for students.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section id="portfolio">
+
+<h2 class="title">Our Projects</h2>
+
+<div class="portfolio">
+
+<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
+
+<img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c">
+
+<img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c">
+
+</div>
+
+</section>
+
+
+<section id="team">
+
+<h2 class="title">Our Team</h2>
+
+<div class="team">
+
+<div class="member">
+<img src="https://randomuser.me/api/portraits/men/32.jpg">
+<h3>Rahul Kumar</h3>
+<p>Founder & Web Developer</p>
+</div>
+
+<div class="member">
+<img src="https://randomuser.me/api/portraits/women/44.jpg">
+<h3>Priya Sharma</h3>
+<p>UI/UX Designer</p>
+</div>
+
+<div class="member">
+<img src="https://randomuser.me/api/portraits/men/65.jpg">
+<h3>Arjun Mehta</h3>
+<p>Data Analyst</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section id="contact">
+
+<h2 class="title">Contact Us</h2>
+
+<div class="contact">
+
+<p>📞 Phone: +91 9876543210</p>
+
+<p>📧 Email: firetech@gmail.com</p>
+
+<p>💼 LinkedIn: linkedin.com/firetech</p>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<p>© 2026 FireTech Solutions | All Rights Reserved</p>
+
+</footer>
+
+
+<script>
+
+function openForm(service){
+
+if(service==="web"){
+window.open("https://forms.gle/YOUR_WEB_FORM","_blank");
+}
+
+if(service==="logo"){
+window.open("https://forms.gle/YOUR_LOGO_FORM","_blank");
+}
+
+if(service==="uiux"){
+window.open("https://forms.gle/YOUR_UIUX_FORM","_blank");
+}
+
+if(service==="data"){
+window.open("https://forms.gle/YOUR_DATA_FORM","_blank");
+}
+
+if(service==="internship"){
+window.open("https://forms.gle/YOUR_INTERNSHIP_FORM","_blank");
+}
+
+}
+
+</script>
+
+</body>
+</html>
+```
